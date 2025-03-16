@@ -920,7 +920,7 @@ async def verification_shape(page):
         return open("gray.png", "rb").read()
 
     # 文字点选的重试次数，超过将重启浏览器
-    retry_count = 10
+    retry_count = 20
     i = 5
     while i > 0:
         i -= 1
