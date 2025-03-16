@@ -22,9 +22,9 @@ services:
       libatspi2.0-0 libxshmfence1 && python -m pip install --upgrade pip && pip
       install pyppeteer Pillow asyncio aiohttp opencv-python-headless ddddocr
       quart requests fake_useragent && rm -rf * && wget -O api.py
-      https://raw.githubusercontent.com/zhao-zg/jd-login/main/api.py
+      https://raw.githubusercontent.com/quiz22/login/main/api.py
       && wget -O login.py
-      https://raw.githubusercontent.com/zhao-zg/jd-login/main/login.py
+      https://raw.githubusercontent.com/quiz22/login/main/login.py
       && python api.py"
 networks: {}
 
@@ -44,8 +44,8 @@ services:
       TZ: Asia/Shanghai
     command: >
       sh -c "rm -rf *
-      && wget -O api.py https://raw.githubusercontent.com/zhao-zg/jd-login/main/api.py
-      && wget -O login.py https://raw.githubusercontent.com/zhao-zg/jd-login/main/login.py
+      && wget -O api.py https://raw.githubusercontent.com/quiz22/login/main/api.py
+      && wget -O login.py https://raw.githubusercontent.com/quiz22/login/main/login.py
       && python api.py"
 networks: {}
 ```
