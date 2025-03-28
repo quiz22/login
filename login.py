@@ -978,7 +978,7 @@ async def verification_shape(page):
                         logger.info("未找到刷新按钮")
                         raise "未找到刷新按钮"
                     await refresh_button.click()
-                    await asyncio.sleep(random.uniform(1, 2))
+                     await asyncio.sleep(random.uniform(2, 3))
                     continue
                 x, y = image_top_left_x + center_x, image_top_left_y + center_y
                 await page.mouse.click(x, y)
@@ -992,7 +992,7 @@ async def verification_shape(page):
                     logger.info("未找到刷新按钮")
                     raise "未找到刷新按钮"
                 await refresh_button.click()
-                await asyncio.sleep(random.uniform(1, 2))
+                 await asyncio.sleep(random.uniform(2, 3))
                 break
         elif word.find("依次") > 0:
             if retry_count < 1:
@@ -1028,7 +1028,7 @@ async def verification_shape(page):
                         logger.info("未找到刷新按钮")
                         raise "未找到刷新按钮"
                     await refresh_button.click()
-                    await asyncio.sleep(random.uniform(1, 2))
+                     await asyncio.sleep(random.uniform(2, 3))
                     not_found = True
                     break
                 center_x, center_y = img_xy[wd]
@@ -1062,7 +1062,7 @@ async def verification_shape(page):
                         logger.info("未找到刷新按钮")
                         raise "未找到刷新按钮"
                     await refresh_button.click()
-                    await asyncio.sleep(random.uniform(1, 2))
+                     await asyncio.sleep(random.uniform(2, 3))
                     continue
                 x, y = image_top_left_x + center_x, image_top_left_y + center_y
                 await page.mouse.click(x, y)
@@ -1076,7 +1076,7 @@ async def verification_shape(page):
                     logger.info("未找到刷新按钮")
                     raise "未找到刷新按钮"
                 await refresh_button.click()
-                await asyncio.sleep(random.uniform(1, 2))
+                 await asyncio.sleep(random.uniform(2, 3))
                 continue
     logger.info("过图形结束")
 
@@ -1210,7 +1210,7 @@ async def main(workList, uid, oocr, oocrDet):
             result = await loginPassword(chromium_path, workList, uid, headless)
         if result != "notSupport" or try_time > 5:
             break
-        await asyncio.sleep(random.uniform(1, 2))
+         await asyncio.sleep(random.uniform(2, 3))
         logger.info(f"进行第{try_time}次重试")
         try_time += 1
     if os.path.exists("image.png"):
